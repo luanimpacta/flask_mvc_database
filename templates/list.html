@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem</title>
+</head>
+<body>
+<a href="/">Cadastrar</a>
+<h1>Listagem</h1>
+
+{# Loop para exibir os nomes dos usuários cadastrados#}
+<table border="1">
+    <tr>
+        <th>nomes</th>
+        <th>e-mail</th>
+    </tr>
+    {% for item in data %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{{ data[0].name }}
+</body>
+</html>
